@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -117,6 +118,15 @@ public class ArquivoResultados {
 
     private static boolean ehRaizProjeto(Path p) {
         return Files.isRegularFile(p.resolve("src").resolve("Main.java"));
+    }
+
+    // Quantidade em milhares para nomes de arquivo: 1000 -> "1k", 100000 -> "100k",
+    // 1500 -> "1.5k"; abaixo de 1000 fica como está
+    public static String emMilhares(int valor) {
+        if (valor < 1000) {
+            return String.valueOf(valor);
+        }
+        return BigDecimal.valueOf(valor, 3).stripTrailingZeros().toPlainString() + "k";
     }
 
     // ---------- Auxiliares de JSON ----------

@@ -103,11 +103,13 @@ Lista os arquivos `.json` da pasta `Resultados` e os apaga depois de confirmaç�
 
 Os arquivos ficam em `Resultados/`, na raiz do projeto. O programa descobre sozinho o **caminho absoluto** dessa pasta, procurando a pasta que contém `src/Main.java` a partir de onde estão as classes compiladas e da pasta do terminal. Por isso funciona em qualquer máquina, sem configuração, e não depende de onde o programa é executado. O caminho aparece no menu.
 
+Nos nomes dos arquivos, tamanhos e número de testes aparecem em milhares: `1000` → `1k`, `100000` → `100k`, `2500` → `2.5k`. Valores abaixo de 1000 ficam como estão. Dentro do JSON os números continuam completos.
+
 Cada execução gera um arquivo novo. Se o nome já existir, o novo arquivo recebe o sufixo ` (2)`, ` (3)` e assim por diante.
 
 ### Teste para definir M
 
-Nome (parâmetros e resultado): `Teste M - Tamanho = 50000 M = 5 a 50 Testes = 1000 - Melhor M = 12 Tempo medio = 2710654 ns.json`
+Nome (parâmetros e resultado): `Teste M - Tamanho = 50k M = 5 a 50 Testes = 1k - Melhor M = 12 Tempo medio = 2710654 ns.json`
 
 ```json
 {
@@ -130,7 +132,7 @@ Nome (parâmetros e resultado): `Teste M - Tamanho = 50000 M = 5 a 50 Testes = 1
 
 ### Bateria de testes
 
-Nome: `Tamanho = 1000,10000,100000 M = 12.json`
+Nome: `Tamanho = 1k,10k,100k M = 12.json`
 
 ```json
 {

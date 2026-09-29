@@ -304,8 +304,11 @@ public class BateriaTestes {
         sb.append("    ]\n");
         sb.append("  }\n}\n");
 
-        // Nome: "Tamanho = 1000,10000 M = 12"; se já existir, ganha " (2)", " (3)"...
-        String listaTamanhos = listaJson(tamanhos).replace("[", "").replace("]", "").replace(" ", "");
+        // Nome: "Tamanho = 1k,10k M = 12"; se já existir, ganha " (2)", " (3)"...
+        StringBuilder listaTamanhos = new StringBuilder();
+        for (int i = 0; i < tamanhos.length; i++) {
+            listaTamanhos.append(i > 0 ? "," : "").append(ArquivoResultados.emMilhares(tamanhos[i]));
+        }
         return ArquivoResultados.salvar("Tamanho = " + listaTamanhos + " M = " + M, sb.toString());
     }
 

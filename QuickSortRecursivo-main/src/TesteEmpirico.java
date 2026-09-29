@@ -104,8 +104,9 @@ public class TesteEmpirico {
         sb.append("  ]\n}\n");
 
         // Nome com os parâmetros e o resultado: melhor M e seu tempo médio
-        String nome = "Teste M - Tamanho = " + tamanho + " M = " + mMinimo + " a " + mMaximo
-                    + " Testes = " + testesPorM
+        String nome = "Teste M - Tamanho = " + ArquivoResultados.emMilhares(tamanho)
+                    + " M = " + mMinimo + " a " + mMaximo
+                    + " Testes = " + ArquivoResultados.emMilhares(testesPorM)
                     + " - Melhor M = " + melhorM + " Tempo medio = " + melhorTempo + " ns";
         try {
             Path arquivo = ArquivoResultados.salvar(nome, sb.toString());
