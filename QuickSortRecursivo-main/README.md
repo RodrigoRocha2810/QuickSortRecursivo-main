@@ -2,6 +2,9 @@
 
 Programa Java que compara três variantes do QuickSort em diferentes tipos e tamanhos de vetor, medindo tempo de execução, trocas e comparações. Os resultados são salvos em arquivos JSON para análise posterior.
 
+## Relatório
+O Relatório foi feio em LateX, coforme requerido pela atividade 
+link -> https://www.overleaf.com/read/hhwcbtmbfqjc#17a63f
 ## Algoritmos
 
 | Algoritmo | Classe | Pivô | Usa M? |
@@ -213,6 +216,6 @@ bin/                         # Classes compiladas
 Resultados/                  # Arquivos JSON gerados (criada automaticamente)
 ```
 
-**Autor**: Rodrigo Rocha, Rafael Brandão, Yuri Martins
+**Autor**: Rodrigo Rocha e Eron Arthur da Silva
 **Versão**: 2.0
-**Data**: Setembro 2026
+**Data**: Outubro de 2026
